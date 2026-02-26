@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Plantilla base que define la estructura común a todas las páginas.
+        Usa bloques Jinja (`titulo`, `contenido`) para que las subplantillas
+        puedan insertar contenido específico.
+    -->
+    <title>{% block titulo %}Crepes & Waffles Canada{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Barra de navegación fija -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">🍽️ CREPES & WAFFLES</div>
+            <ul class="nav-menu">
+                <li><a href="/" {% if request.path == '/' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/menu" {% if request.path == '/menu' %}class="active"{% endif %}>Menu</a></li>
+                <li><a href="/contacto" {% if request.path == '/contacto' %}class="active"{% endif %}>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal dinámico -->
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <!-- Pie de página con información de contacto -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Crepes & Waffles. All rights reserved.</p>
+            <p>📍 Red Deer, Canada | 📞 +1 (403) 872-6007 | 📧 info@crepesywaffles.ca</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">Modern Design | Premium Ingredients | Unique Experience</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al script principal -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

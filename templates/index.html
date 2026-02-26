@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicio - Crepes & Waffles Canada{% endblock %}
+
+{% block contenido %}
+<!--
+    Página de inicio con secciones: hero, características, horarios y CTA.
+ -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Crepes & Waffles</h1>
+        <p>A unique culinary experience with fresh ingredients and artisanal recipes. Every bite is a celebration of flavor and quality.</p>
+        <a href="/menu" class="btn btn-primary">Explore Menu</a>
+    </div>
+    <!-- imagen principal del restaurante -->
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='img/foto_negocio.jpeg') }}" alt="Our Restaurant">
+    </div>
+</section>
+
+<section class="features">
+    <!-- bloque de puntos fuertes o razones -->
+    <h2>Why Choose Us</h2>
+    <p>Different reasons to visit us</p>
+    <div class="features-grid">
+        <div class="feature-card">
+            <span class="feature-icon">🥘</span>
+            <h3>Fresh Ingredients</h3>
+            <p>Only the finest ingredients, hand-selected daily</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">👨‍🍳</span>
+            <h3>Artisanal Preparation</h3>
+            <p>Handmade with traditional and modern techniques</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>Fast Service</h3>
+            <p>Without compromising quality, ready in minutes</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🌟</span>
+            <h3>Unique Experience</h3>
+            <p>A welcoming atmosphere and exceptional service</p>
+        </div>
+    </div>
+</section>
+
+<section class="opening-hours">
+    <!-- horario de atención con dos bloques -->
+    <h2>Hours of Operation</h2>
+    <p>Visit us at your preferred time</p>
+    <div class="hours-container">
+        <div class="hours">
+            <h3>Monday to Friday</h3>
+            <p>8:00 AM - 10:00 PM</p>
+        </div>
+        <div class="hours">
+            <h3>Saturday and Sunday</h3>
+            <p>9:00 AM - 11:00 PM</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <!-- llamada a la acción final -->
+    <h2>Ready for a delicious experience?</h2>
+    <a href="/menu" class="btn btn-secondary">Discover Our Menu</a>
+</section>
+{% endblock %}

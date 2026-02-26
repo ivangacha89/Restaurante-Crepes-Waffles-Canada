@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block titulo %}Menú - Crepes & Waffles Canada{% endblock %}
+
+{% block contenido %}
+<!--
+    Página de menú rediseñada con 5 secciones principales.
+    Cada sección muestra una imagen representativa del plato.
+-->
+<section class="menu-section">
+    <h1>Our Menu</h1>
+    <p>Discover unique flavors and gastronomic experiences</p>
+    
+    <div class="menu-categories">
+        <!-- Sección 1: Fries and Chicken -->
+        <div class="category">
+            <h2>🍟 Fries and Chicken</h2>
+            <div class="menu-item-image-full">
+                <img src="{{ url_for('static', filename='img/friesandchicken.jpeg') }}" alt="Fries and Chicken" onerror="this.src='{{ url_for('static', filename='img/placeholder.jpg') }}'">
+            </div>
+        </div>
+
+        <!-- Sección 2: All Day Breakfast -->
+        <div class="category">
+            <h2>🍳 All Day Breakfast</h2>
+            <div class="menu-item-image-full">
+                <img src="{{ url_for('static', filename='img/alldaybreakfast.jpeg') }}" alt="All Day Breakfast" onerror="this.src='{{ url_for('static', filename='img/placeholder.jpg') }}'">
+            </div>
+        </div>
+
+        <!-- Sección 3: Mini Pancakes -->
+        <div class="category">
+            <h2>🥞 Mini Pancakes</h2>
+            <div class="menu-item-image-full">
+                <img src="{{ url_for('static', filename='img/minipancakes.jpeg') }}" alt="Mini Pancakes" onerror="this.src='{{ url_for('static', filename='img/placeholder.jpg') }}'">
+            </div>
+        </div>
+
+        <!-- Sección 4: Milk Shakes -->
+        <div class="category">
+            <h2>🥤 Milk Shakes</h2>
+            <div class="menu-item-image-full">
+                <img src="{{ url_for('static', filename='img/milkshakes.jpeg') }}" alt="Milk Shakes" onerror="this.src='{{ url_for('static', filename='img/placeholder.jpg') }}'">
+            </div>
+        </div>
+
+        <!-- Sección 5: Smoothies -->
+        <div class="category">
+            <h2>🥗 Smoothies</h2>
+            <div class="menu-item-image-full">
+                <img src="{{ url_for('static', filename='img/smoothies.jpeg') }}" alt="Smoothies" onerror="this.src='{{ url_for('static', filename='img/placeholder.jpg') }}'">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

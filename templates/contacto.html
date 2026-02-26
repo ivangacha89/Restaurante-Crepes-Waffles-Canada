@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block titulo %}Contacto - Crepes & Waffles Canada{% endblock %}
+
+{% block contenido %}
+<!--
+    Página de contacto con información y mapa de ubicación.
+-->
+<section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>Contact information and hours of operation</p>
+    
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Information</h2>
+            <div class="info-item">
+                <h3>📍 Location</h3>
+                <p>4747 67 Street<br>500<br>Red Deer, AB T4N 6H3<br>Canada</p>
+            </div>
+            <div class="info-item">
+                <h3>📞 Phone</h3>
+                <p>+1 (403) 872-6007</p>
+            </div>
+            <div class="info-item">
+                <h3>📧 Email</h3>
+                <p>info@crepesywaffles.ca</p>
+            </div>
+            <div class="info-item">
+                <h3>⏰ Hours</h3>
+                <p><strong>Monday to Friday:</strong> 8:00 AM - 10:00 PM<br>
+                   <strong>Saturday and Sunday:</strong> 9:00 AM - 11:00 PM</p>
+            </div>
+        </div>
+
+        <div class="contact-map">
+            <!-- Using a simpler embed URL for reliability -->
+            <iframe
+                src="https://www.google.com/maps?q=4747+67+Street,+Red+Deer,+AB+T4N+6H3&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}
